@@ -4,14 +4,14 @@ to expose the ports of the emulator through environment variables
 
 
 Container is running Alpine linux with Node LTS, Bash, and Openjdk11 installed.
-Container installs the firebase-toolkit from npm. It also installs the firestore, pubsub, andfunctions emulator and turns on the UI.
+Container installs the firebase-toolkit from npm. It also installs the firestore, pubsub emulator and turns on the UI.
 
 # Execute container
 
-`docker run -p 8080:8080 -p 4000:4000 -p 8085:8085 -p 5001:500 -p 5005:5005 matthewkrupnik/docker-firestore-emulator-with-ui`
+`docker run -p 8080:8080 -p 4000:4000 -p 8085:8085 -p 5005:5005 matthewkrupnik/docker-firestore-emulator-with-ui`
 
 Execute the container exposing the firestore server on the port 8200 instead of the standard 8080
-`docker run -e FIRESTORE_PORT=8200 -p 8200:8200 -p 4000:4000 -p 8085:8085 -p 5001:5001 -p 5005:5005 matthewkrupnik/docker-firestore-emulator-with-ui`
+`docker run -e FIRESTORE_PORT=8200 -p 8200:8200 -p 4000:4000 -p 8085:8085  -p 5005:5005 matthewkrupnik/docker-firestore-emulator-with-ui`
 
 # Env variables and ports
 
@@ -19,13 +19,11 @@ Execute the container exposing the firestore server on the port 8200 instead of 
 * FIRESTORE_WS_PORT default to 5005
 * UI_PORT default to 4000
 * PUSUB_PORT default to 8085
-* FUNCTIONS_PORT default to 5001
 
 # Mountpoints
 
 * firestore.indexes.json is found at /firebase/firestore.indexes.json
 * firestore.rules is found at /firebase.rules
-* functions need to be loaded at /firestore/functions
 
 # Firestore
 

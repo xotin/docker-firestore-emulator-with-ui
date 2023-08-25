@@ -35,5 +35,5 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/docker-firestore-emulator-with-ui:latest,${{ secrets.DOCKER_USER }}/docker-firestore-emulator-with-ui:1.0.${{github.run_number}}
+          tags: ${{ secrets.DOCKER_USER }}/firestore-emulators:latest,${{ secrets.DOCKER_USER }}/firestore-emulators:1.0.${{github.run_number}}
   
