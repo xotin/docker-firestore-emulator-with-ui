@@ -14,7 +14,7 @@ Execute the container exposing the firestore server on the port 8200 instead of 
 `docker run -e FIRESTORE_PORT=8200 -p 8200:8200 -p 4000:4000 -p 8085:8085  -p 5005:5005 matthewkrupnik/docker-firestore-emulator-with-ui`
 
 # Env variables and ports
-
+* GCP_PROJECT fefault to dev
 * FIRESTORE_PORT default to 8080
 * FIRESTORE_WS_PORT default to 5005
 * UI_PORT default to 4000
